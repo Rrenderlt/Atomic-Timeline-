@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Model Timeline</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #0a0f24, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #a5c8ff;
+      margin-top: 30px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #00d4ff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      box-shadow: 0 0 20px #00d4ff;
+    }
+
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      width: 45%;
+      box-shadow: 0 0 10px rgba(0, 162, 255, 0.3);
+      transition: 0.3s;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 55%;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-color: #00d4ff;
+      border-radius: 50%;
+      top: 20px;
+      right: -9px;
+      box-shadow: 0 0 10px #00d4ff;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -9px;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.03);
+      background: rgba(0, 162, 255, 0.15);
+      box-shadow: 0 0 25px rgba(0, 162, 255, 0.7);
+    }
+
+    .timeline-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .scientist-name {
+      font-size: 1.4rem;
+      color: #a5c8ff;
+      font-weight: bold;
+    }
+
+    .year {
+      color: #00d4ff;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .discovery {
+      margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6em;
+    }
+
+    .experiment {
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .experiment img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 90%;
+        left: 0 !important;
+        margin-left: 40px;
+      }
+      .timeline-item::before {
+        left: -28px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Timeline of the Atomic Model</h1>
+  <div class="timeline">
+
+    <!-- Democritus -->
+    <div class="timeline-item">
+      <div class="scientist-name">Democritus (460–370 BC)</div>
+      <div class="year">Ancient Greece</div>
+      <img src="images/democritus.jpeg" alt="Democritus Portrait">
+      <div class="discovery">
+        Proposed that all matter is made up of indivisible and indestructible particles called “atomos.” 
+        He believed these atoms differed only in size, shape, and arrangement, which explained the variety of materials around us. 
+        Although his theory was purely philosophical with no experimental evidence, it introduced the first concept of the atom, 
+        shaping future scientific thought on matter and its composition.
+      </div>
+      <div class="experiment">
+        <strong>Approach:</strong> Purely philosophical reasoning; no practical experiment conducted, as scientific tools were not yet developed. 
+        <img src="images/democritus_model.jpeg" alt="Democritus Atomic Model">
+      </div>
+    </div>
+
+    <!-- Dalton -->
+    <div class="timeline-item">
+      <div class="scientist-name">John Dalton (1803)</div>
+      <div class="year">England</div>
+      <img src="images/dalton.jpeg" alt="Dalton Portrait">
+      <div class="discovery">
+        Introduced the first scientific atomic theory: all matter consists of indivisible atoms 
+        that combine in whole-number ratios to form compounds. 
+        <br><br><strong>Postulates:</strong>
+        <br>1️⃣ All matter is made of atoms — tiny, indivisible particles.  
+        <br>2️⃣ Atoms of the same element are identical.  
+        <br>3️⃣ Atoms combine in simple whole-number ratios to form compounds.  
+        <br>He based his theory on careful measurements of gas reactions, making him the father of modern atomic theory.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Studied gas behavior and formulated the <em>Law of Partial Pressures</em>, measuring gas reactions and pressures.   
+        His discovery was indirect, inferred through chemical data.
+        <img src="images/dalton_experiment.jpeg" alt="Dalton Gas Law Experiment">
+        <img src="images/dalton_model.jpeg" alt="Dalton Atomic Model">
+      </div>
+    </div>
+
+    <!-- Goldstein -->
+    <div class="timeline-item">
+      <div class="scientist-name">Eugen Goldstein (1886)</div>
+      <div class="year">Germany</div>
+      <img src="images/goldstein.jpeg" alt="Goldstein Portrait">
+      <div class="discovery">
+        Discovered <strong>canal rays</strong>, or streams of positively charged particles, which were later identified as protons. 
+        His research revealed that atoms contain positive charges in addition to the known negative ones. 
+        Goldstein’s findings served as the first step toward understanding the internal structure of the atom and paved the way 
+        for the later identification of protons by Rutherford.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Used a <em>discharge tube with a perforated cathode</em>, allowing positive rays to pass through. 
+        He observed glowing streams traveling in the opposite direction to cathode rays, proving the existence of positive particles within atoms.
+        <img src="images/goldstein_experiment.jpeg" alt="Goldstein Canal Ray Experiment">
+      </div>
+    </div>
+
+    <!-- Thomson -->
+    <div class="timeline-item">
+      <div class="scientist-name">J.J. Thomson (1897)</div>
+      <div class="year">England</div>
+      <img src="images/thomson.jpeg" alt="Thomson Portrait">
+      <div class="discovery">
+        Discovered the <strong>electron</strong>—a negatively charged subatomic particle—through his study of cathode rays. 
+        Thomson proposed the <em>“Plum Pudding Model”</em>, which depicted electrons scattered within a sphere of positive charge, 
+        similar to raisins in a pudding. His work proved that atoms are divisible, challenging Dalton’s idea of indivisible atoms 
+        and opening the door to the study of subatomic particles.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Cathode Ray Tube Experiment — Thomson passed electric current through a low-pressure gas, 
+        observing rays deflected by magnetic and electric fields, indicating they carried a negative charge.
+        <img src="images/thomson_experiment.jpeg" alt="Thomson CRT Experiment">
+        <img src="images/thomson_model.jpeg" alt="Thomson Atomic Model">
+      </div>
+    </div>
+
+    <!-- Rutherford -->
+    <div class="timeline-item">
+      <div class="scientist-name">Ernest Rutherford (1911)</div>
+      <div class="year">New Zealand / England</div>
+      <img src="images/rutherford.jpeg" alt="Rutherford Portrait">
+      <div class="discovery">
+        Discovered the <strong>atomic nucleus</strong> and proposed the <em>Nuclear Model</em>, where most of the atom’s mass 
+        is concentrated in a small, dense, positively charged center. 
+        His discovery revolutionized atomic theory and overturned the Plum Pudding Model by showing that electrons orbit 
+        around a central nucleus instead of being embedded within the atom.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Gold Foil Experiment — Rutherford fired alpha particles at thin gold foil. 
+        Most passed through, but a few deflected sharply, proving the existence of a compact nucleus. 
+        <img src="images/rutherford_experiment.jpeg" alt="Gold Foil Experiment">
+        <img src="images/rutherford_model.jpeg" alt="Rutherford Atomic Model">
+      </div>
+    </div>
+
+    <!-- Bohr -->
+    <div class="timeline-item">
+      <div class="scientist-name">Niels Bohr (1913)</div>
+      <div class="year">Denmark</div>
+      <img src="images/bohr.jpeg" alt="Bohr Portrait">
+      <div class="discovery">
+        Proposed the <strong>Bohr Model</strong> of the atom, stating that electrons orbit the nucleus in specific, quantized energy levels. 
+        When electrons jump between these levels, they absorb or emit energy as light. 
+        This model explained the distinct spectral lines of hydrogen and provided the first link between atomic structure and quantum theory.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Studied the emission spectrum of hydrogen gas. 
+        The pattern of spectral lines matched the predicted energy differences between electron levels in his model.
+        <img src="images/bohr_experiment.jpeg" alt="Bohr Spectral Lines">
+        <img src="images/bohr_model.jpeg" alt="Bohr Model">
+      </div>
+    </div>
+
+    <!-- de Broglie -->
+    <div class="timeline-item">
+      <div class="scientist-name">Louis de Broglie (1924)</div>
+      <div class="year">France</div>
+      <img src="images/broglie.jpeg" alt="de Broglie Portrait">
+      <div class="discovery">
+        Proposed the concept of <strong>wave-particle duality</strong>, suggesting that all matter, including electrons, 
+        exhibits both particle-like and wave-like properties. 
+        This theory helped explain why electrons can only occupy certain stable orbits and contributed to the development 
+        of quantum mechanics. His work bridged the gap between classical physics and quantum theory.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Theoretical proposal later confirmed by the <strong>Davisson–Germer experiment</strong>, 
+        where electrons produced diffraction patterns — direct evidence of their wave nature.
+        <img src="images/broglie_experiment.jpeg" alt="de Broglie Wave Experiment">
+        <img src="images/broglie_model.jpeg" alt="de Broglie Wave Model">
+      </div>
+    </div>
+
+    <!-- Schrödinger -->
+    <div class="timeline-item">
+      <div class="scientist-name">Erwin Schrödinger (1926)</div>
+      <div class="year">Austria</div>
+      <img src="images/schrodinger.jpeg" alt="Schrodinger Portrait">
+      <div class="discovery">
+        Developed the <strong>Quantum Mechanical Model</strong> of the atom. 
+        Schrödinger proposed that electrons do not follow fixed orbits but exist in regions of probability called <em>orbitals</em>. 
+        His equation describes how the electron’s wave function evolves, predicting the areas where electrons are most likely found. 
+        This model remains the foundation of modern atomic theory.
+      </div>
+      <div class="experiment">
+        <strong>Approach:</strong> Used mathematical wave equations to describe electron motion and behavior within the atom, 
+        creating visualizations that show electron density clouds rather than defined paths.
+        <img src="images/schrodinger_experiment.jpeg" alt="Schrodinger Equation Visualization">
+        <img src="images/schrodinger_model.jpeg" alt="Schrodinger Atomic Model">
+      </div>
+    </div>
+
+    <!-- Chadwick -->
+    <div class="timeline-item">
+      <div class="scientist-name">James Chadwick (1932)</div>
+      <div class="year">England</div>
+      <img src="images/chadwick.jpeg" alt="Chadwick Portrait">
+      <div class="discovery">
+        Discovered the <strong>neutron</strong>, a neutral particle within the nucleus, explaining why atomic masses were 
+        greater than the number of protons alone. His work completed the modern understanding of atomic structure 
+        and laid the foundation for nuclear physics, including atomic energy and radioactivity research.
+      </div>
+      <div class="experiment">
+        <strong>Experiment:</strong> Bombarded beryllium with alpha particles, releasing a neutral radiation that could knock protons 
+        out of other elements. He concluded that this radiation consisted of uncharged particles — neutrons.
+        <img src="images/chadwick_experiment.jpeg" alt="Chadwick Beryllium Experiment">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
